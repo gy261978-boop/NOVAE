@@ -1,0 +1,33 @@
+/* =========================
+   CORE PALETTE & RESET
+========================= */
+:root {
+    --black: #050505;
+    --white: #E8E8E8;
+    --violet: #6E00FF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--black);
+    color: var(--white);
+    font-family: 'Space Grotesk', sans-serif;
+    line-height: 1.5;
+}
+
+html,
+body,
+#root {
+    width: 100%;
+    height: 100%;
+}
+
+.app {
+    width: 100%;
+    min-height: 100vh;
+}

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NOVAE | Future Relics</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<nav class="main-nav">
+    <div class="logo">NOVAE</div>
+    <div class="menu-items">
+        <a href="#">ARCHIVE</a>
+        <a href="#">ABOUT</a>
+        <a href="#" id="cart-toggle" class="violet-accent">CART (<span id="cart-count">0</span>)</a>
+    </div>
+</nav>
+
+<!-- CART SIDEBAR -->
+<div class="cart-sidebar" id="cart-sidebar">
+    <div class="cart-header">
+        <h3>Your Cart</h3>
+        <button id="cart-close" class="cart-close">&times;</button>
+    </div>
+    <div class="cart-items" id="cart-items">
+        <p class="empty-cart">No items yet</p>
+    </div>
+    <div class="cart-footer">
+        <div class="cart-total">
+            <span>Total:</span>
+            <span id="total-price">$0</span>
+        </div>
+        <button class="checkout-btn">CHECKOUT</button>
+    </div>
+</div>
+
+<!-- CART OVERLAY -->
+<div class="cart-overlay" id="cart-overlay"></div>
+
+<header class="hero">
+    <div class="hero-split thrift">
+        <div class="bg-image" style="background-image: url('https://images.unsplash.com/photo-1550684848-fac1c5b4e853?auto=format&fit=crop&q=80&w=2070');"></div>
+        <div class="content">
+            <h2>THRIFT</h2>
+            <button class="cta-btn">ENTER ARCHIVE</button>
+        </div>
+    </div>
+    <div class="hero-split jewellery">
+        <div class="bg-image" style="background-image: url('https://images.unsplash.com/photo-1617038260897-41a1f14a8ca0?auto=format&fit=crop&q=80&w=1974');"></div>
+        <div class="content">
+            <h2>JEWELLERY</h2>
+            <button class="cta-btn">VIEW RELICS</button>
+        </div>
+    </div>
+</header>
+
+<section class="archive">
+    <div class="archive-intro">
+        <p class="timestamp">// DISCOVERED RELICS 2024</p>
+        <h3>Curated garments and engineered jewellery that feel discovered, not mass-produced.</h3>
+    </div>
+
+    <!-- FILTER BUTTONS -->
+    <div class="filter-container">
+        <button class="filter-btn active" data-filter="all">ALL ITEMS</button>
+        <button class="filter-btn" data-filter="thrift">THRIFT</button>
+        <button class="filter-btn" data-filter="jewelry">JEWELRY</button>
+    </div>
+
+    <div class="archive-grid">
+
+        <div class="grid-item small" data-category="thrift">
+            <img src="https://images.unsplash.com/photo-1552664199-fd31f7431a55?auto=format&fit=crop&q=80&w=1000">
+            <div class="item-overlay">
+                <span class="action primary add-to-cart">Add to Cart</span>
+                <span class="action">View Similar</span>
+            </div>
+            <div class="item-info"><span>VOID TEE</span><span>$65</span></div>
+        </div>
+
+        <div class="grid-item tall" data-category="jewelry">
+            <img src="https://images.unsplash.com/photo-1635767798638-3e25273a8236?auto=format&fit=crop&q=80&w=1000">
+            <div class="item-overlay">
+                <span class="action primary add-to-cart">Add to Cart</span>
+                <span class="action">View Similar</span>
+            </div>
+            <div class="item-info"><span>ORBITAL RING / 01</span><span>$180</span></div>
+        </div>
+
+        <div class="grid-item wide" data-category="jewelry">
+            <img src="https://images.unsplash.com/photo-1602173574767-37ac01994b2a?auto=format&fit=crop&q=80&w=1000">
+            <div class="item-overlay">
+                <span class="action primary add-to-cart">Add to Cart</span>
+                <span class="action">View Similar</span>
+            </div>
+            <div class="item-info"><span>FRAGMENT PENDANT</span><span>$210</span></div>
+        </div>
+
+        <div class="grid-item medium" data-category="thrift">
+            <img src="https://images.unsplash.com/photo-1585386959984-a41552231693?auto=format&fit=crop&q=80&w=1000">
+            <div class="item-overlay">
+                <span class="action primary add-to-cart">Add to Cart</span>
+                <span class="action">View Similar</span>
+            </div>
+            <div class="item-info"><span>ARCHIVE SHIRT</span><span>$120</span></div>
+        </div>
+
+        <div class="grid-item tall right" data-category="jewelry">
+            <img src="https://images.unsplash.com/photo-1617038260897-41a1f14a8ca0?auto=format&fit=crop&q=80&w=1000">
+            <div class="item-overlay">
+                <span class="action primary add-to-cart">Add to Cart</span>
+                <span class="action">View Similar</span>
+            </div>
+            <div class="item-info"><span>OBSIDIAN CHAIN</span><span>$260</span></div>
+        </div>
+
+        <div class="grid-item small bottom" data-category="thrift">
+            <img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?auto=format&fit=crop&q=80&w=1000">
+            <div class="item-overlay">
+                <span class="action primary add-to-cart">Add to Cart</span>
+                <span class="action">View Similar</span>
+            </div>
+            <div class="item-info"><span>RELIC CAP</span><span>$45</span></div>
+        </div>
+
+    </div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>

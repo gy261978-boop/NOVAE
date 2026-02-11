@@ -1,0 +1,105 @@
+/* =========================
+   ARCHIVE SECTION
+========================= */
+.archive {
+    padding: 10rem 4rem;
+}
+
+.archive-intro {
+    max-width: 600px;
+    margin-bottom: 8rem;
+}
+
+.archive-intro h3 {
+    font-size: 1.2rem;
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+.timestamp {
+    color: var(--violet);
+    font-size: 0.7rem;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+/* =========================
+   FILTER BUTTONS
+========================= */
+.filter-container {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 5rem;
+    animation: slideDown 0.6s ease;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.filter-btn {
+    background: transparent;
+    border: 1px solid rgba(232, 232, 232, 0.3);
+    color: var(--white);
+    padding: 0.8rem 1.8rem;
+    cursor: pointer;
+    font-size: 0.7rem;
+    letter-spacing: 0.15rem;
+    font-family: 'Space Grotesk', sans-serif;
+    transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.filter-btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: var(--violet);
+    transition: left 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    z-index: -1;
+}
+
+.filter-btn:hover {
+    border-color: var(--violet);
+    color: var(--white);
+}
+
+.filter-btn:hover::before {
+    left: 0;
+}
+
+.filter-btn.active {
+    background: var(--violet);
+    border-color: var(--violet);
+    color: var(--black);
+    box-shadow: 0 0 20px rgba(110, 0, 255, 0.4);
+}
+
+/* =========================
+   GRID LAYOUT
+========================= */
+.archive-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 2.5rem;
+    transition: grid-template-columns 0.5s ease;
+}
+
+.archive-grid.sequential-grid {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.archive-grid.unorganised {
+    grid-template-columns: repeat(12, 1fr);
+}
